@@ -1,0 +1,56 @@
+class carro{
+    private modelo: String;
+    private color: String;
+    private año: number;
+    private precio: number;
+
+    constructor (modelo: string = "", color:string = "",año:number =0, precio=0){
+        this.modelo = modelo;
+        this.color = color;
+        this.año = año;
+        this.precio = precio;
+    }
+    constructor2(modelo:string="",color:string=""){
+        this. modelo = modelo;
+        this.color = color
+    }
+
+    get Modelo(){
+        return this.modelo;  
+    }
+    set Modelo(valor:String){
+        this.modelo = valor;
+    }
+    get Color(){
+        return this.color;  
+    }
+    set Color(valor:String){
+        this.color = valor;
+    }
+    get Año(){
+        return this.año;  
+    }
+    set Año(valor:number){
+        this.año = valor;
+    }
+    get Precio(){
+        return this.precio;  
+    }
+    set Precio(valor:number){
+        this.precio = valor;
+    }
+    imprimirDatos(){
+      return "Los datos son: " + this.Modelo + " ,"  + this.Color + " ,"  + this.Año + " ,"  + this.Precio
+    }
+
+}
+const Carro=new carro();
+Carro.Modelo = "Ford"
+Carro.Color = "Rojo"
+Carro.Año=2022
+Carro.Precio=60000
+console.log(Carro.imprimirDatos());
+const Carroviejo=new carro();
+Carroviejo.Modelo = "Mazda"
+Carroviejo.Color = "Azul"
+console.log(Carroviejo.imprimirDatos());
